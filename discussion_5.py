@@ -45,7 +45,7 @@ class Warehouse:
 	def get_max_stock(self):
 		items_dict = {}
 		num_most_stock = 0
-		most_stock = ''
+		most_stock = 'none'
 		for item in self.items:
 			items_dict[item] = items_dict.get(items_dict[item, 0]) + 1
 			if items_dict[item] > num_most_stock:
@@ -90,17 +90,20 @@ class TestAllMethods(unittest.TestCase):
 
 	## Check to see whether you can add an item to the warehouse
 	def test_add_item(self):
+		self.assertEqual(add_item)
+		self.assertEqual(add_item)
 
 		pass
 
 
 	## Check to see whether warehouse correctly returns the item with the most stock
 	def test_warehouse_max_stocks(self):
-		pass
+		self.assertEqual(get_max_stock)
 
 
 	# Check to see whether the warehouse correctly return the item with the highest price
 	def test_warehouse_max_price(self):
+		self.assertEqual(get_max_price)
 		pass
 		
 
