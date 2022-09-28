@@ -54,6 +54,9 @@ class Warehouse:
 	
 	# Returns the item in the warehouse with the highest price
 	def get_max_price(self):
+		items_dict = {}
+		num_most_stock = 0
+		most_stock = ''
 		for item in self.items:
 			items_dict[item] = items_dict.get(items_dict[item, 0]) + 1
 			if items_dict[item] > num_most_stock:
@@ -77,9 +80,10 @@ class TestAllMethods(unittest.TestCase):
 
 	## Check to see whether count_a works
 	def test_count_a(self):
-		self.assertEqual(count_a("sentence here"), 0 )
-		self.assertEqual(count_a("", 0))
-		self.assertEqual
+		self.assertEqual(count_a("sentence here"), 0, "sentence with no a's" )
+		self.assertEqual(count_a("", 0, "Testing an empty string"))
+		self.assertEqual(count_a("a is in this 3 times a a"), 0, "Testing my own sentece with 3 a's")
+		self.assertEqual(count_a(self.item5.name, 2 ,"Testing CocaCola"))
 
 		pass
 
